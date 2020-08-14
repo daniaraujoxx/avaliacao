@@ -3,13 +3,14 @@ package com.rd.treinamentodev.AvaliacaoSpringBoot.model.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
 @Entity
 @Table(name = "TB_TURMA")
 @Data
-public class TurmaEntity {
+public class TurmaEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -41,5 +42,6 @@ public class TurmaEntity {
             inverseJoinColumns = @JoinColumn(name = "ID_ALUNO")
     )
     private List<AlunoEntity> alunos;
+
 
 }

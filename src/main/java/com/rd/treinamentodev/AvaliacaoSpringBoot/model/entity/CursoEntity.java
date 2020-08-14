@@ -20,4 +20,7 @@ public class CursoEntity {
 
     @Column(name = "NR_CARGA_HORARIA")
     private Integer nrCargaHoraria;
-}
+
+
+    }
+
